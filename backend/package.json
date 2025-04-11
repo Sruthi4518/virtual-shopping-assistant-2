@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "engines": {
+    "node": ">=18.x"
+  },
   "dependencies": {
     "@google/generative-ai": "^0.24.0",
     "axios": "^1.8.4",
@@ -17,8 +19,6 @@
     "express": "^5.1.0",
     "node-fetch": "^2.7.0",
     "openai": "^4.25.0",
-    "react-speech-recognition": "^4.0.0",
     "uuid": "^11.1.0"
-  },
-  "description": ""
+  }
 }
