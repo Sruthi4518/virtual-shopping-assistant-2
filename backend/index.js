@@ -9,13 +9,6 @@ const app = express();
 const port = process.env.PORT || 3001;
 const apiKey = process.env.GEMINI_API_KEY;
 
-app.use(cors({
-  origin: [
-    process.env.FRONTEND_URL,
-    "http://localhost:3000" // For local development
-  ]
-}));
-
 if (!apiKey) {
     console.error('Error: GEMINI_API_KEY is not set in environment variables.');
     process.exit(1);
