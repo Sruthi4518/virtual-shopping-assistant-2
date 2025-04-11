@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import axios from 'axios';
 import './App.css';
 
 function App() {
@@ -30,12 +29,6 @@ function App() {
             return [];
         }
     }); 
-
-    useEffect(() => {
-    axios.get(`${process.env.REACT_APP_API_URL}/api`)
-      .then(res => console.log(res.data))
-      .catch(err => console.error(err));
-    }, []);
 
     const chatContainerRef = useRef(null);
     const recognitionRef = useRef(null);
